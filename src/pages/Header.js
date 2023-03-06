@@ -10,7 +10,7 @@ const Header = ({ DEFAULT, NAV }) => {
                 <h1>
                     <Link to='/'>
                         <img
-                            src={process.env.PUBLIC_URL + '/assets/grafflogo.png'}
+                            src={process.env.PUBLIC_URL + '/assets/logo.png'}
                             alt={DEFAULT.company} />
                     </Link>
                 </h1>

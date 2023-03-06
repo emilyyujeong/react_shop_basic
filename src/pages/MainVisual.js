@@ -3,6 +3,7 @@ import MainSlide from "react-slick";
 import { BTN, Inner } from "./common";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import '../css/MainVisual.scss'
 
 const MainVisual = ({ DEFAULT_CONTENTS }) => {
     const option = {
@@ -18,7 +19,8 @@ const MainVisual = ({ DEFAULT_CONTENTS }) => {
     }, [])
 
     return (
-        <>
+
+        <section className="MainVisual">
             <MainSlide
                 {...option}
                 ref={s}
@@ -45,11 +47,10 @@ const MainVisual = ({ DEFAULT_CONTENTS }) => {
                 <button onClick={() => s.current.slickNext()}>앞로가기</button>
             </div>
             <div className="num">
-                현재슬라이드의 번호 : {sNum + 1}
-                전체슬라이드갯수 : {DEFAULT_CONTENTS.length}
+                <strong>{sNum + 1}</strong> / <span>{DEFAULT_CONTENTS.length}</span>
             </div>
 
-            <ul>
+            <ul className="dots">
                 {
                     DEFAULT_CONTENTS.map((_, slideIndx) => {
                         return (
@@ -58,7 +59,7 @@ const MainVisual = ({ DEFAULT_CONTENTS }) => {
                     })
                 }
             </ul>
-        </>
+        </section>
     )
 }
 
