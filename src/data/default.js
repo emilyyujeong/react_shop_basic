@@ -7,22 +7,23 @@ export const DEFAULT = {
 export const DEFAULT_CONTENTS = [
     {
         id: 1,
-        title: 'JEWELLERY COLLECTION',
+        title: '01.JEWELLERY COLLECTION',
         description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷',
+        color: '#336699',
     },
     {
         id: 2,
-        title: '02. JEWELLERY COLLECTION',
+        title: '02.JEWELLERY COLLECTION',
         description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷',
+        color: '#663399',
     },
     {
         id: 3,
-        title: '03. JEWELLERY COLLECTION',
+        title: '03.JEWELLERY COLLECTION',
         description: '모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷',
-    },
-
+        color: '#996633',
+    }
 ]
-
 
 export const NAV = [
     {
@@ -31,18 +32,17 @@ export const NAV = [
         link: '/',
         submenu: [
             {
-                title: '01 하이주얼리',
+                title: '01하이주얼리',
                 link: '/sub01',
             },
             {
-                title: '02 하이주얼리',
+                title: '02하이주얼리',
                 link: '/sub02',
             },
             {
-                title: '03 하이주얼리',
+                title: '03하이주얼리',
                 link: '/sub03',
-            },
-
+            }
         ]
     },
     {
@@ -51,24 +51,37 @@ export const NAV = [
         link: '/',
         submenu: [
             {
-                title: '02 주얼리 컬렉션',
+                title: '02주얼리 컬렉션',
                 link: '/sub01',
             },
             {
-                title: '02 주얼리 컬렉션',
+                title: '02주얼리 컬렉션',
                 link: '/sub02',
             },
             {
-                title: '02 주얼리 컬렉션',
+                title: '02주얼리 컬렉션',
                 link: '/sub03',
-            },
-
+            }
         ]
     },
     {
         id: 3,
         title: '컬렉션 & 브라이덜',
         link: '/',
+        submenu: [
+            {
+                title: '02주얼리 컬렉션',
+                link: '/sub01',
+            },
+            {
+                title: '02주얼리 컬렉션',
+                link: '/sub02',
+            },
+            {
+                title: '02주얼리 컬렉션',
+                link: '/sub03',
+            }
+        ]
     },
     {
         id: 4,
@@ -79,5 +92,5 @@ export const NAV = [
         id: 5,
         title: '특별한 솔리테어',
         link: '/',
-    },
+    }
 ]
