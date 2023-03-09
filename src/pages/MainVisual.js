@@ -3,7 +3,9 @@ import MainSlide from "react-slick";
 import { BTN, Inner } from "./common";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import '../css/MainVisual.scss'
+import '../css/MainVisual.scss';
+
+
 
 const MainVisual = ({ DEFAULT_CONTENTS }) => {
     const option = {
@@ -12,14 +14,9 @@ const MainVisual = ({ DEFAULT_CONTENTS }) => {
     }
 
     const s = useRef(null);
-    const [sNum, setSNum] = useState();
-
-    useEffect(() => {
-        setSNum(0);
-    }, [])
+    const [sNum, setSNum] = useState(0);
 
     return (
-
         <section className="MainVisual">
             <MainSlide
                 {...option}
@@ -42,9 +39,8 @@ const MainVisual = ({ DEFAULT_CONTENTS }) => {
             </MainSlide>
             <div className="tab">{DEFAULT_CONTENTS[sNum]?.title}</div>
             <div className="arrows">
-                {console.log(s.current)}
-                <button onClick={() => s.current.slickPrev()}>뒤로가기</button>
-                <button onClick={() => s.current.slickNext()}>앞로가기</button>
+                <button onClick={() => s.current.slickPrev()} className="prev">뒤로가기</button>
+                <button onClick={() => s.current.slickNext()} className="next">앞로가기</button>
             </div>
             <div className="num">
                 <strong>{sNum + 1}</strong> / <span>{DEFAULT_CONTENTS.length}</span>
@@ -54,7 +50,7 @@ const MainVisual = ({ DEFAULT_CONTENTS }) => {
                 {
                     DEFAULT_CONTENTS.map((_, slideIndx) => {
                         return (
-                            <li className={slideIndx === sNum ? 'on' : ''}><button onClick={() => s.current.slickGoTo(slideIndx)}>{slideIndx + 1}</button></li>
+                            <li className={slideIndx === sNum ? 'on' : ''} key={slideIndx}><button onClick={() => s.current.slickGoTo(slideIndx)}>{slideIndx + 1}</button></li>
                         )
                     })
                 }
